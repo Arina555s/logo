@@ -2195,11 +2195,11 @@ h6 {
   padding: 0 6px;
 }
 
-.images-product-subslider__slide.swiper-slide-active .images-product-subslider__subimage {
+.images-product-subslider__slide.swiper-slide-thumb-active .images-product-subslider__subimage {
   border: 1px solid #f65738;
 }
 
-.images-product-subslider__slide.swiper-slide-active .images-product-subslider__subimage::after {
+.images-product-subslider__slide.swiper-slide-thumb-active .images-product-subslider__subimage::after {
   opacity: 1;
 }
 
@@ -2972,7 +2972,7 @@ h6 {
   margin: 0px 23px;
   width: 55px;
   height: 55px;
-  background-color: rgb(250, 200, 200);
+  background-color: rgb(235, 234, 234);
   overflow: hidden;
   border-radius: 50%;
   border: 2px solid #fff;
@@ -2980,6 +2980,16 @@ h6 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
 }
 
 .mainslider__dotts .swiper-pagination-bullet::after {
@@ -3275,6 +3285,7 @@ h6 {
 
 .search-page__input .input {
   height: 100%;
+  width: 100%;
 }
 
 .categories-search {
