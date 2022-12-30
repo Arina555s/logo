@@ -1508,6 +1508,26 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -6231,6 +6251,27 @@
         };
         const da = new DynamicAdapt("max");
         da.init();
+        if (isMobile.any()) {
+            let menuParents = document.querySelectorAll(".menu-page__parent>a");
+            for (let index = 0; index < menuParents.length; index++) {
+                const menuParent = menuParents[index];
+                menuParent.addEventListener("click", (function(e) {
+                    menuParent.parentElement.classList.toggle("_active");
+                    e.preventDefault();
+                }));
+            }
+        } else {
+            let menuParents = document.querySelectorAll(".menu-page__parent");
+            for (let index = 0; index < menuParents.length; index++) {
+                const menuParent = menuParents[index];
+                menuParent.addEventListener("mouseenter", (function(e) {
+                    menuParent.classList.add("_active");
+                }));
+                menuParent.addEventListener("mouseleave", (function(e) {
+                    menuParent.classList.remove("_active");
+                }));
+            }
+        }
         let menuPageBurger = document.querySelector(".menu-page__burger");
         let menuPageBody = document.querySelector(".menu-page__body");
         menuPageBurger.addEventListener("click", (function(e) {

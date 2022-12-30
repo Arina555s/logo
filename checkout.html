@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220706112150">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221230153017">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
 							<nav data-da=".menu__body,991.98,1" class="menu__box">
 								<ul class="menu__list">
 									<li><a class="menu__link" href="catalog.html">Каталог</a></li>
-									<li><a href="index.html" class="menu__link">Главная</a></li>
+									<li><a href="home.html" class="menu__link">Главная</a></li>
 									<li><a class="menu__link" href="saidbar.html">Карточка товара</a></li>
 									<li><a href="saidbar.html" class="menu__link">Гарантия</a></li>
 									<li><a href="checkout.html" class="menu__link">Оплата</a></li>
@@ -469,7 +469,7 @@
 						<div data-tabs class="checkout__content content-checkout _tabs">
 							<nav data-tabs-titles class="content-checkout__nav">
 								<div class="content-checkout__item  _tab-active"><span>Быстрый заказ</span></div>
-								<div class="content-checkout__item "><span>Курьером по москве и мо</span></div>
+								<div class="content-checkout__item "><span>Курьером по москве</span></div>
 								<div class="content-checkout__item "><span>Доставка в регионы</span></div>
 							</nav>
 							<div data-tabs-body class="content-checkout__body">
@@ -479,7 +479,7 @@
 											<div class="form-checkout__line">
 												<div class="form-checkout__label">Имя:&nbsp;<span>*</span></div>
 												<div class="form-checkout__input">
-													<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input ">
+													<input required autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input ">
 												</div>
 											</div>
 											<div class="form-checkout__line">
@@ -488,13 +488,13 @@
 
 
 												<div class="form-checkout__input">
-													<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-value="" class="input ">
+													<input required autocomplete="on" type="number" name="form[]" data-error="Ошибка" data-value="" class="input ">
 												</div>
 											</div>
 											<div class="form-checkout__line">
 												<div class="form-checkout__label">Ваш E-mail:</div>
 												<div class="form-checkout__input">
-													<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Ошибка" class="input">
+													<input required data-required="email" autocomplete="on" type="text" name="form[]" data-error="Ошибка" class="input">
 												</div>
 											</div>
 											<div class="form-checkout__line">
@@ -524,8 +524,11 @@
 									</div>
 								</div>
 								<div class="content-checkout__block ">
+									Контент 1
 								</div>
-								<div class="content-checkout__block "></div>
+								<div class="content-checkout__block ">
+									Контент 2
+								</div>
 							</div>
 						</div>
 
@@ -768,7 +771,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20220706112150"></script>
+	<script src="js/app.min.js?_v=20221230153017"></script>
 </body>
 
 </html>
